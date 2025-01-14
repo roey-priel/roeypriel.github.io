@@ -1,0 +1,136 @@
+:root {
+    --navy: #1a1f2e;
+    --text-gray: #a1a5b0;
+    --tag-bg: rgba(45, 212, 191, 0.1);
+    --tag-text: rgb(45, 212, 191);
+}
+
+body {
+    background-color: var(--navy);
+    color: white;
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    line-height: 1.6;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 4rem;
+    height: 100%;
+}
+
+.left-column {
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+    width: 350px;
+}
+
+.right-column {
+    padding-right: 2rem;
+    padding-top: 6rem;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+    padding-bottom: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.title {
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+}
+
+nav {
+    margin: 2rem 0;
+}
+
+nav a {
+    color: var(--text-gray);
+    text-decoration: none;
+    margin-right: 2rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-links a {
+    color: var(--text-gray);
+}
+
+.experience-item {
+    margin-bottom: 3rem;
+}
+
+.date {
+    color: var(--text-gray);
+}
+
+.tech-stack {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tech-tag {
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+#about, #experience {
+    min-height: 50vh;
+}
+
+/* Custom scrollbar styles */
+.right-column::-webkit-scrollbar {
+    width: 8px;
+}
+
+.right-column::-webkit-scrollbar-track {
+    background: var(--navy);
+}
+
+.right-column::-webkit-scrollbar-thumb {
+    background-color: var(--text-gray);
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow: auto;
+        height: auto;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .left-column {
+        position: relative;
+        width: 100%;
+        top: 0;
+    }
+
+    .right-column {
+        max-height: none;
+        overflow: visible;
+        padding-right: 0;
+        padding-top: 2rem;
+    }
+} 
