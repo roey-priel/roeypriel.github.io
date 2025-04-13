@@ -3,6 +3,7 @@
     --text-gray: #a1a5b0;
     --tag-bg: rgba(45, 212, 191, 0.1);
     --tag-text: rgb(45, 212, 191);
+    --timeline-color: rgb(45, 212, 191);
 }
 
 body {
@@ -58,42 +59,202 @@ nav a {
     color: var(--text-gray);
     text-decoration: none;
     margin-right: 2rem;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: white;
+}
+
+nav a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--timeline-color);
+    transition: width 0.3s ease;
+}
+
+nav a:hover:after {
+    width: 100%;
+}
+
+/* Navigation active state */
+nav a.active {
+    color: white;
+}
+
+nav a.active:after {
+    width: 100%;
 }
 
 .social-links {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     margin-top: 2rem;
 }
 
 .social-links a {
     color: var(--text-gray);
+    transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+    color: var(--timeline-color);
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Timeline styling for experience */
+.timeline-container {
+    position: relative;
+    padding-left: 20px;
+}
+
+.timeline-container:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: var(--timeline-color);
+    border-radius: 3px;
 }
 
 .experience-item {
-    margin-bottom: 3rem;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 3.5rem;
+    padding-bottom: 1rem;
+}
+
+.experience-item:before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--navy);
+    border: 3px solid var(--timeline-color);
+    left: -11px;
+    top: 6px;
+    box-shadow: 0 0 0 4px rgba(45, 212, 191, 0.1);
+    z-index: 1;
+}
+
+.company-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.education-item {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.education-item:before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--navy);
+    border: 3px solid var(--timeline-color);
+    left: -11px;
+    top: 6px;
+    box-shadow: 0 0 0 4px rgba(45, 212, 191, 0.1);
+    z-index: 1;
+}
+
+.role {
+    color: var(--text-gray);
+    font-style: italic;
+    margin-bottom: 0.5rem;
 }
 
 .date {
     color: var(--text-gray);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+h2:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: var(--timeline-color);
+    bottom: -8px;
+    left: 0;
+}
+
+.degree {
+    color: var(--text-gray);
+    margin-bottom: 0.5rem;
+}
+
+section {
+    margin-bottom: 3rem;
 }
 
 .tech-stack {
     display: flex;
     gap: 0.5rem;
     margin-top: 1rem;
+    flex-wrap: wrap;
 }
 
 .tech-tag {
     background: var(--tag-bg);
     color: var(--tag-text);
-    padding: 0.25rem 0.75rem;
+    padding: 0.35rem 0.8rem;
     border-radius: 4px;
     font-size: 0.9rem;
+    transition: all 0.2s ease;
+    cursor: default;
 }
 
-#about, #experience {
-    min-height: 50vh;
+.tech-tag:hover {
+    background-color: rgba(45, 212, 191, 0.2);
+    transform: translateY(-2px);
+}
+
+#about {
+    margin-bottom: 4rem;
+}
+
+#experience, #education, #projects {
+    min-height: 30vh;
 }
 
 /* Custom scrollbar styles */
@@ -109,6 +270,13 @@ nav a {
     background-color: var(--text-gray);
     border-radius: 4px;
 }
+
+/* Content section visibility - simple and direct approach */
+.content-section {
+    display: none;
+}
+
+/* We'll handle showing via JavaScript directly, not CSS */
 
 @media (max-width: 768px) {
     body {
@@ -133,4 +301,145 @@ nav a {
         padding-right: 0;
         padding-top: 2rem;
     }
+}
+
+/* Project section styling */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: var(--timeline-color);
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: white;
+}
+
+.project-card p {
+    color: var(--text-gray);
+    margin-bottom: 1.5rem;
+}
+
+/* Make sure all sections are hidden initially except for 'about' */
+#about {
+    display: block; /* Initially visible */
+}
+
+/* Responsive adjustments for project grid */
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skill-icons {
+        display: block;
+        width: 100%;
+    }
+    
+    .skill-icon {
+        margin-right: 8px;
+        margin-bottom: 25px;
+    }
+}
+
+/* Skills section styling */
+.skills-section {
+    margin-top: 2.5rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+.skill-category {
+    width: 100%;
+    min-width: 0;
+    overflow: visible;
+}
+
+.skill-category h3 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--timeline-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* Style for skill icons */
+.skill-icons {
+    display: block;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.skill-icon {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    margin: 0 10px 30px 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-icon svg {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.skill-icon:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 20px rgba(45, 212, 191, 0.1);
+}
+
+.skill-icon::after {
+    content: attr(title);
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--navy);
+    color: var(--text-gray);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.skill-icon:hover::after {
+    opacity: 1;
 } 

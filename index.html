@@ -3,52 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Roey Paz-Priel - ML Engineer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <div class="left-column">
             <header>
-                <h1>Roey Priel</h1>
+                <h1>Roey Paz-Priel</h1>
                 <div class="title">ML Engineer</div>
-                <p>I build accessible, pixel-perfect digital experiences for the web.</p>
+                <p>beep boop</p>
             </header>
 
             <nav>
-                <a href="#about">ABOUT</a>
-                <a href="#experience">EXPERIENCE</a>
-                <a href="#projects">PROJECTS</a>
+                <a href="#about" class="nav-link active" data-section="about">ABOUT</a>
+                <a href="#experience" class="nav-link" data-section="experience">EXPERIENCE</a>
+                <a href="#education" class="nav-link" data-section="education">EDUCATION</a>
             </nav>
 
             <footer class="social-links">
-                <a href="#" aria-label="GitHub"><svg><!-- GitHub icon --></svg></a>
-                <a href="#" aria-label="LinkedIn"><svg><!-- LinkedIn icon --></svg></a>
-                <a href="#" aria-label="Email"><svg><!-- Email icon --></svg></a>
+                <a href="https://github.com/roey-priel" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/roey-paz-priel/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+                <a href="mailto:roey.priel@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </a>
             </footer>
         </div>
 
         <div class="right-column">
-            <section id="about">
-                <p>I'm a developer passionate about crafting accessible, pixel-perfect user interfaces that blend thoughtful design with robust engineering.</p>
+            <section id="about" class="content-section active" style="display: block;">
+                <p>beep boop</p>
+
+                <p>beep boop</p>
                 
-                <p>Currently, I'm a Senior Front-End Engineer at [Company], specializing in accessibility.</p>
+                <div class="skills-section">
+                    <h2>Skills</h2>
+                    <table style="border-collapse: separate; border-spacing: 10px 0;">
+                        <tr>
+                            <td>
+                                <div class="skill-icon" title="Python">
+                                    <svg viewBox="0 0 128 128" width="40" height="40">
+                                        <path fill="#3572A5" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z"></path><path fill="#FFC331" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z"></path>
+                                    </svg>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="skill-icon" title="C++">
+                                    <svg viewBox="0 0 128 128" width="40" height="40">
+                                        <path fill="#004482" d="M117.5 33.5l.3-.2c-.6-1.1-1.5-2.1-2.4-2.6L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.3.9 3.4l-.2.1c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c.1-.8 0-1.7-.4-2.6zm-53.5 70c-21.8 0-39.5-17.7-39.5-39.5S42.2 24.5 64 24.5c14.7 0 27.5 8.1 34.3 20l-13 7.5C81.1 44.5 73.1 39.5 64 39.5c-13.5 0-24.5 11-24.5 24.5s11 24.5 24.5 24.5c9.1 0 17.1-5 21.3-12.4l12.9 7.6c-6.8 11.8-19.6 19.8-34.2 19.8zM115 62h-3.2l-.9 4h4.1v5h-5l-1.2 6h-4.9l1.2-6h-3.8l-1.2 6h-4.8l1.2-6H92v-5h4.4l.9-4H93v-5h5.3l1.2-6h4.9l-1.2 6h3.8l1.2-6h4.8l-1.2 6h4.1v5zM102.9 66h3.8l.9-4h-3.8l-.9 4z"></path>
+                                    </svg>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="skill-icon" title="SQL">
+                                    <svg viewBox="0 0 128 128" width="40" height="40">
+                                        <path fill="#00618A" d="M116.948 97.807c-6.863-.187-12.104.452-16.585 2.341-1.273.537-3.305.552-3.513 2.147.7.733.809 1.829 1.365 2.731 1.07 1.73 2.876 4.052 4.488 5.268 1.762 1.33 3.577 2.751 5.465 3.902 3.358 2.047 7.107 3.217 10.34 5.268 1.906 1.21 3.799 2.733 5.658 4.097.92.675 1.537 1.724 2.732 2.147v-.194c-.628-.8-.79-1.898-1.366-2.733l-2.537-2.537c-2.48-3.292-5.629-6.184-8.976-8.585-2.669-1.916-8.642-4.504-9.755-7.609l-.195-.195c1.892-.214 4.107-.898 5.854-1.367 2.934-.786 5.556-.583 8.585-1.365l4.097-1.171v-.78c-1.531-1.571-2.623-3.651-4.292-5.073-4.37-3.72-9.138-7.437-14.048-10.537-2.724-1.718-6.089-2.835-8.976-4.292-.971-.491-2.677-.746-3.318-1.562-1.517-1.932-2.342-4.382-3.511-6.633-2.449-4.717-4.854-9.868-7.024-14.831-1.48-3.384-2.447-6.72-4.293-9.756-8.86-14.567-18.396-23.358-33.169-32-3.144-1.838-6.929-2.563-10.929-3.513-2.145-.129-4.292-.26-6.438-.391-1.311-.546-2.673-2.149-3.902-2.927C17.811 4.565 5.686-2.282 1.392 8.384c-2.711 6.742 4.059 13.351 6.437 16.76 1.738 2.483 3.984 5.277 5.267 8.026 1.279 2.746 1.527 5.459 2.732 8.293.863 2.002 2.264 4.259 3.511 6.144.655.974 1.781 1.416 1.953 2.927-1.098 1.535-1.17 3.906-1.757 5.854-2.761 8.645-1.71 19.338 2.341 25.707 1.268 1.991 4.304 6.357 8.294 4.683 3.565-1.496 2.772-5.94 3.804-9.902.24-.939.123-1.627.587-2.341v.195l3.513 7.024c2.6 4.187 7.212 8.562 11.122 11.514 2.027 1.531 3.623 4.177 6.244 5.073v-.196h-.195c-.508-.791-1.303-1.119-1.953-1.757-1.527-1.497-3.225-3.358-4.487-5.073-3.556-4.827-6.698-10.11-9.561-15.609-1.368-2.627-2.557-5.523-3.709-8.196-.444-1.03-.438-2.589-1.364-3.122-1.263 1.958-3.122 3.542-4.098 5.854-1.561 3.696-1.762 8.204-2.341 12.878-.342.122-.19.038-.391.194-2.718-.655-3.672-3.452-4.683-5.854-2.554-6.07-3.029-15.842-.781-22.829.582-1.809 3.21-7.501 2.146-9.172-.508-1.666-2.184-2.63-3.121-3.903-1.161-1.574-2.319-3.646-3.124-5.464-2.09-4.731-3.066-10.044-5.267-14.828-1.053-2.287-2.832-4.602-4.293-6.634-1.617-2.253-3.429-3.912-4.683-6.635-.446-.968-1.051-2.518-.391-3.513.21-.671.508-.951 1.171-1.171 1.132-.873 4.284.29 5.462.779 3.129 1.3 5.741 2.538 8.392 4.294 1.271.844 2.559 2.475 4.097 2.927h1.756c2.747.631 5.824.195 8.391.975 4.535 1.378 8.6 3.542 12.292 5.854 11.246 7.072 20.442 17.17 26.732 29.242 1.012 1.942 1.45 3.794 2.341 5.854 1.798 4.153 4.063 8.426 5.852 12.488 1.786 4.052 3.526 8.141 6.05 11.513 1.327 1.772 6.451 2.723 8.781 3.708 1.632.689 4.307 1.409 5.854 2.34 2.953 1.782 5.815 3.903 8.586 5.855 1.383.975 5.64 3.116 5.852 4.879zM29.729 23.466c-1.431-.027-2.443.156-3.513.389v.195h.195c.683 1.402 1.888 2.306 2.731 3.513.65 1.367 1.301 2.732 1.952 4.097l.194-.193c1.209-.853 1.762-2.214 1.756-4.294-.484-.509-.555-1.147-.975-1.755-.556-.811-1.635-1.272-2.34-1.952z"></path>
+                                    </svg>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="skill-icon" title="TypeScript">
+                                    <svg viewBox="0 0 128 128" width="40" height="40">
+                                        <path fill="#007acc" d="M2 63.91v62.5h125v-125H2zm100.73-5a15.56 15.56 0 017.82 4.5 20.58 20.58 0 013 4c0 .16-5.4 3.81-8.69 5.85-.12.08-.6-.44-1.13-1.23a7.09 7.09 0 00-5.87-3.53c-3.79-.26-6.23 1.73-6.21 5a4.58 4.58 0 00.54 2.34c.83 1.73 2.38 2.76 7.24 4.86 8.95 3.85 12.78 6.39 15.16 10 2.66 4 3.25 10.46 1.45 15.24-2 5.2-6.9 8.73-13.83 9.9a38.32 38.32 0 01-9.52-.1 23 23 0 01-12.72-6.63c-1.15-1.27-3.39-4.58-3.25-4.82a9.34 9.34 0 011.15-.73L82 101l3.59-2.08.75 1.11a16.78 16.78 0 004.74 4.54c4 2.1 9.46 1.81 12.16-.62a5.43 5.43 0 00.69-6.92c-1-1.39-3-2.56-8.59-5-6.45-2.78-9.23-4.5-11.77-7.24a16.48 16.48 0 01-3.43-6.25 25 25 0 01-.22-8c1.33-6.23 6-10.58 12.82-11.87a31.66 31.66 0 019.49.26zm-29.34 5.24v5.12H57.16v46.23H45.65V69.26H29.38v-5a49.19 49.19 0 01.14-5.16c.06-.08 10-.12 22-.1h21.81z"></path>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </section>
 
-            <section id="experience">
-                <div class="experience-item">
-                    <div class="date">2024 — PRESENT</div>
-                    <h3>Senior Frontend Engineer, Accessibility · Company Name</h3>
-                    <p>Build and maintain critical components used to construct the frontend, across the whole product.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Storybook</span>
+            <section id="experience" class="content-section" style="display: none;">
+                <h2>Experience</h2>
+                <div class="timeline-container">
+                    <div class="experience-item">
+                        <div class="date">JAN 2024 — PRESENT</div>
+                        <img src="assets/tavus.svg" alt="Tavus Logo" class="company-logo">
+                        <h3>Tavus</h3>
+                        <div class="role">Senior ML Engineer (Nov 2024 - Present)</div>
+                        <div class="role">ML Engineer (Jan 2024 - Nov 2024)</div>
+                        <p>Building and scaling generative AI products, focusing on advanced machine learning solutions for video generation.</p>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="date">2022 — 2024</div>
+                        <img src="assets/av.png" alt="Aerovironment Logo" class="company-logo">
+                        <h3>Aerovironment</h3>
+                        <div class="role">Computer Vision Engineer</div>
+                        <p>Developed computer vision algorithms for autonomous systems, specializing in object detection and tracking for unmanned aerial vehicles.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="education" class="content-section" style="display: none;">
+                <h2>Education</h2>
+                <div class="timeline-container">
+                    <div class="education-item">
+                        <div class="date">2020 — 2022</div>
+                        <h3>Johns Hopkins University</h3>
+                        <div class="degree">Master of Science (MS)</div>
+                        <p>Focused on machine learning and artificial intelligence with an emphasis on computer vision applications.</p>
+                    </div>
+                    <div class="education-item">
+                        <div class="date">2016 — 2020</div>
+                        <h3>University of California, Los Angeles (UCLA)</h3>
+                        <div class="degree">Bachelor of Science (BS)</div>
+                        <p>Studied computer science with a focus on algorithms and software engineering fundamentals.</p>
                     </div>
                 </div>
             </section>
         </div>
     </div>
+
+    <script>
+        // Function to show a specific section
+        function showSection(sectionId) {
+            // Hide all sections first
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Show the selected section
+            const activeSection = document.getElementById(sectionId);
+            if (activeSection) {
+                activeSection.style.display = 'block';
+            }
+            
+            // Update nav links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.getAttribute('data-section') === sectionId) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+        
+        // Add click event listeners to each navigation link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const sectionId = this.getAttribute('data-section');
+                showSection(sectionId);
+                
+                // Update URL hash without scrolling
+                history.pushState(null, null, '#' + sectionId);
+            });
+        });
+
+        // Handle hash change
+        window.addEventListener('hashchange', function() {
+            const hash = window.location.hash.substring(1) || 'about';
+            showSection(hash);
+        });
+        
+        // Initialize with the current hash or default to about
+        document.addEventListener('DOMContentLoaded', function() {
+            const hash = window.location.hash.substring(1) || 'about';
+            showSection(hash);
+        });
+        
+        // Also run immediately in case DOM is already loaded
+        const hash = window.location.hash.substring(1) || 'about';
+        showSection(hash);
+    </script>
 </body>
 </html>
